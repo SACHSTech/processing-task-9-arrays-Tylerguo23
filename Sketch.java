@@ -94,6 +94,7 @@ public class Sketch extends PApplet {
       }
       }
 
+      
 
       // Moves the player according to movement booleans
       if (upPressed && playerY > 0) {
