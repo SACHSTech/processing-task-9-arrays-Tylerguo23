@@ -57,7 +57,7 @@ public class Sketch extends PApplet {
       // reset snow fallign speed if no arrow keys are held
       fltSnowSpeed = 1;
 
-      // Adjust the speed that snow falls while the UP or DOWN arrow keys are being held
+      // adjust the speed that snow falls while the UP or DOWN arrow keys are being held
       if (keyPressed){
         if (keyCode == UP){
           fltSnowSpeed = 0.5f;
@@ -67,14 +67,14 @@ public class Sketch extends PApplet {
         }
       }
 
-      // For every element in the snow arrays, change the Y position and then draw the snowflake.
+      // for every element in the snow arrays, change the Y position and then draw the snowflake.
       for (int i = 0; i < snowY.length; i++) {
         fill(255);
         if(isSnowExist[i]){
           snowY[i] += fltSnowSpeed;
           ellipse(snowX[i], snowY[i], width / 20, height / 20);
 
-          // Check for collision for each snow element with player. If a collision occurs, flashes the screen red, removes that snowflake, and subtracts a life.
+          // check for collision for each snow element with player. If a collision occurs, flashes the screen red, removes that snowflake, and subtracts a life.
           if (dist(playerX, playerY, snowX[i], snowY[i]) < width / 20 && isSnowExist[i]){
             isSnowExist[i] = false;
             background(100, 0, 0);
@@ -86,7 +86,7 @@ public class Sketch extends PApplet {
             }
           }
 
-          // Resets snow back to a random position at the top of the screen once it reaches the bottom
+          // resets snow back to a random position at the top of the screen once it reaches the bottom
           if (snowY[i] > height) {
             snowY[i] = 0;
             snowX[i] = random(width);
@@ -96,7 +96,7 @@ public class Sketch extends PApplet {
 
       
 
-      // Moves the player according to movement booleans
+      // moves the player according to movement booleans
       if (upPressed && playerY > 0) {
         playerY -= 2;
       }
