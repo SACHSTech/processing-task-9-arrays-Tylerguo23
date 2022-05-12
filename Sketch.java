@@ -1,7 +1,7 @@
 import processing.core.PApplet;
 
 /**
-* An interactive simulation of snow falling and the player dodging/clicking the snow
+* An interactive simulation of snow falling and the player dodging/clicking the snow.
 * @author: T. Guo
 *
 */
